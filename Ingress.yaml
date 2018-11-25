@@ -1,12 +1,15 @@
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  name: web-ingress
+  name: nodejs-web-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
-  - host: web.chi
+  - host: dev.chi
     http:
       paths:
-      - backend:
-          serviceName: web-service
+      - path: /nodejs
+        backend:
+          serviceName: nodejs-web-service
           servicePort: 80

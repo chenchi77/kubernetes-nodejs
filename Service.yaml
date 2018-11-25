@@ -1,10 +1,10 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: web-service
+  name: nodejs-web-service
 spec:
   selector:
-    app: web
+    app: nodejs-web
   ports:
   - protocol: TCP
     port: 80

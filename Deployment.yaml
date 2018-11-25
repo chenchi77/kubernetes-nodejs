@@ -1,14 +1,14 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: web
+  name: nodejs-web
   labels:
-    app: web
+    app: nodejs-web
 spec:
-  replicas: 10
+  replicas: 5
   selector:
     matchLabels:
-      app: web
+      app: nodejs-web
   strategy:
     type: RollingUpdate
     rollingUpdate:
@@ -18,11 +18,11 @@ spec:
   template:
     metadata:
       labels:
-        app: web
+        app: nodejs-web
     spec:
       containers:
-      - name: web
-        image: chenchi77/demoweb:latest
+      - name: nodejs-web
+        image: chenchi77/nodejs-web:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 3000
