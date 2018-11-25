@@ -1,6 +1,13 @@
 {
-  "name": "webapp",
+  "name": "nodejsweb",
   "version": "1.0.0",
+  "description": "Nodejs Web",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chenchi77/kubernetes-nodejs.git"
+  },
+  "author": "Charlie Chen",
   "scripts": {
     "start": "node index.js"
   },
